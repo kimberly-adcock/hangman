@@ -52,7 +52,6 @@ if (yessir.includes(userWantsToPlay.toLowerCase())) {
     var userLetters = userWord.split("")
     var computerGuesses = [];
     var word = '*';
-    var i = 26;
     while (word.indexOf('*') !== -1) {
         var computerChoice = generateLetterGuess(computerGuesses);
         computerGuesses.push(computerChoice);
@@ -61,6 +60,8 @@ if (yessir.includes(userWantsToPlay.toLowerCase())) {
         word = showGuesses(userLetters, computerGuesses);
         console.log('Remaining: ' + word);
     }
-    console.log('Computer guessed the word in ' + computerGuesses.length + ' tries');
+    alert('Computer guessed the word in ' + computerGuesses.length + ' tries');
 }
 else { alert("Maybe next time! Click Cancel to Exit") }
+
+location.reload()
